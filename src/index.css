@@ -1,13 +1,113 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Quicksand';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #EDE9FE;
 }
+
+.no-select {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
+
+.calc-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #F3F4F6;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius:30px;
+}
+
+.calc-container .calc-main-input {
+  width: 97%;
+  margin: 0 auto;
+  display: block;
+  padding: 40px 23px 0px 23px;
+  font-size: 65px;
+  border: none;
+  outline: none;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  font-weight: 900;
+  caret-color: transparent;
+  color: #4B5563;
+}
+
+.calc-container .calc-controls {
+  display: flex;
+  margin: 20px 0;
+}
+.calc-left {
+  flex-wrap: wrap;
+}
+
+.calc-right {
+  flex-direction: column;
+}
+
+.calc-controls button {
+  width: 95px;
+  height: 95px;
+  border: none;
+  padding: 5px;
+  margin: 3px;
+  font-weight: 900;
+  font-size: 35px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #6B7280;
+  color: #D1D5DB;
+  border-radius: 5px;
+}
+
+.calc-controls button:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.calc-container .calc-controls .calc-icon {
+  width: 80%;
+}
+
+.calc-container .calc-controls .icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc-controls-parent {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.calc-controls .highlighted-button {
+  color: #6B7280;
+  background-color: #BFDBFE;
+}
+
+.calc-controls .attention-button {
+  color: #E5E7EB;
+  background-color: #F87171;
+}
+
+.history-display {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 30px;
+  top: 15px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #6B7280;
+  width: 87%;
+}
+
